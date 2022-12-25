@@ -43,11 +43,6 @@ jobs:
       - name: Generate fontlist # Generate FONTLIST.json and FONTLIST.md
         run: pnpm run util:fontlist
 
-      - name: Generate Algolia index # Generate Algolia search index for website
-        run: pnpm run util:algolia
-        env:
-          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-
       - name: Format files
         run: pnpm run format
 
