@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    if: github.actor == 'ayuhito'
+    if: github.actor == 'tamiogmbh'
 
     steps:
       - name: checkout
@@ -49,9 +49,6 @@ jobs:
       - name: Stage, commit and push files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_user_name: "fontsource-bot"
-          commit_user_email: "83556432+fontsource-bot@users.noreply.github.com"
-          commit_author: "fontsource-bot <83556432+fontsource-bot@users.noreply.github.com>"
           commit_message: "chore(build): update packages [Force Rebuild]"
         continue-on-error: true
 
@@ -61,8 +58,5 @@ jobs:
       - name: If error, commit again before publishing
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_user_name: "fontsource-bot"
-          commit_user_email: "83556432+fontsource-bot@users.noreply.github.com"
-          commit_author: "fontsource-bot <83556432+fontsource-bot@users.noreply.github.com>"
           commit_message: "chore(build): resolve file check errors [Force Rebuild]"
         continue-on-error: true
