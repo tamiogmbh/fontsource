@@ -45,7 +45,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const client = algoliasearch(
-  "WNATE69PVR",
+  "MPQGSQPG4C",
   process.env.ALGOLIA_ADMIN_KEY as string
 );
 const index = client.initIndex("prod_FONTS");
